@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrailCam Diaries - Tips &amp; Gear</title>
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+
+  <div class="page-container">
+    <nav class="top-nav">
+      <a href="index.html" class="nav-btn">Page 1: Overview</a>
+      <a href="trails.html" class="nav-btn">Page 2: Trail Guides</a>
+      <a href="tips.html" class="nav-btn active">Page 3: Tips &amp; Gear</a>
+    </nav>
+
+    <main class="page-content">
+      <header class="site-header">
+        <h1>Tips &amp; Gear</h1>
+        <p>Practical riding fundamentals, eastern Idaho trail-prep checklists, and tested action-camera settings for steep terrain.</p>
+        <div class="search-wrap">
+          <input type="search" id="card-search" class="search-input" placeholder="Search guides (e.g., tire PSI, cornering, camera)...">
+        </div>
+      </header>
+
+      <div class="filter-bar">
+        <button type="button" class="filter-pill active-filter" data-filter="all">All Resources</button>
+        <button type="button" class="filter-pill" data-filter="skills">Riding Skills</button>
+        <button type="button" class="filter-pill" data-filter="gear">Gear Reviews</button>
+        <button type="button" class="filter-pill" data-filter="camera">TrailCam Setup</button>
+      </div>
+
+      <p id="empty-message" class="empty-message">No resources match your filter or search. Try clearing your search box.</p>
+
+      <div class="card-grid">
+        <div class="info-card forest-top" data-category="skills">
+          <div>
+            <span class="badge badge-green">Skills Guide</span>
+            <h3>Loose Shale &amp; Cornering</h3>
+            <p>How to weight your outside pedal, drop your heels, and feather both brakes on dusty summer singletrack like Kelly Canyon.</p>
+          </div>
+          <a href="#" class="btn-link">Read Guide</a>
+        </div>
+
+        <div class="info-card forest-top" data-category="skills">
+          <div>
+            <span class="badge badge-green">Skills Guide</span>
+            <h3>Pacing Steep Forest Climbs</h3>
+            <p>Cadence tips, dropper-post height adjustments, and front-wheel weight control for grinding up 1,000+ ft Big Hole climbs.</p>
+          </div>
+          <a href="#" class="btn-link">Read Guide</a>
+        </div>
+
+        <div class="info-card" data-category="gear">
+          <div>
+            <span class="badge badge-terracotta">Essential Gear</span>
+            <h3>Backcountry Ride Pack</h3>
+            <p>What to carry when cell service drops: offline Trailforks maps, tubeless bacon strips, mini-pump, multi-tool, and 2L hydration.</p>
+          </div>
+          <a href="#" class="btn-link">View Checklist</a>
+        </div>
+
+        <div class="info-card" data-category="gear">
+          <div>
+            <span class="badge badge-terracotta">Tire Setup</span>
+            <h3>Eastern Idaho Tire &amp; PSI Guide</h3>
+            <p>Recommended tread patterns and tubeless pressure charts for switching between smooth Eagle Park dirt and sharp Teton rocks.</p>
+          </div>
+          <a href="#" class="btn-link">See Chart</a>
+        </div>
+
+        <div class="info-card burgundy-top" data-category="camera">
+          <div>
+            <span class="badge badge-burgundy">Camera Setup</span>
+            <h3>Chest Mount Angle &amp; FOV</h3>
+            <p>How to angle your action cam upside-down on a chest harness with SuperView/HyperView so steep chutes don't look flat.</p>
+          </div>
+          <a href="#" class="btn-link">See Settings</a>
+        </div>
+
+        <div class="info-card burgundy-top" data-category="camera">
+          <div>
+            <span class="badge badge-burgundy">Audio &amp; Stabilization</span>
+            <h3>Eliminating Wind &amp; Chain Slap</h3>
+            <p>Foam windslayer placement and stabilization settings that keep fast forest descents crisp without losing trail sound.</p>
+          </div>
+          <a href="#" class="btn-link">View Audio Tips</a>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 TrailCam Diaries &bull; Ethan Heikell &bull; WDD 130</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

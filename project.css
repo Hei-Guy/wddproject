@@ -1,0 +1,473 @@
+/* ==========================================
+   1. ROOT VARIABLES & GLOBAL RESET
+   ========================================== */
+:root {
+  --primary-green: #2d4739;
+  --secondary-burgundy: #723d46;
+  --accent-terracotta: #c96d44;
+  --accent-cream: #f4f1ea;
+  --text-dark: #1f2421;
+  --text-muted: #555b57;
+  --white: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--accent-cream);
+  color: var(--text-dark);
+  line-height: 1.6;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--primary-green);
+  margin-bottom: 0.6rem;
+  text-align: center;
+}
+
+h1 { font-size: 2.1rem; }
+h2 { font-size: 1.5rem; margin-top: 0.5rem; }
+h3 { font-size: 1.15rem; color: var(--secondary-burgundy); }
+
+p {
+  max-width: 720px;
+  margin: 0 auto 1rem auto;
+  text-align: center;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid rgba(45, 71, 57, 0.15);
+  margin: 2rem auto;
+  width: 85%;
+}
+
+/* ==========================================
+   2. MAIN CONTAINER & PAGE CONTENT
+   ========================================== */
+.page-container {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  text-align: center;
+}
+
+.page-content {
+  width: 100%;
+  padding: 2.5rem 2rem;
+}
+
+.section-block {
+  width: 100%;
+  margin: 1.5rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ==========================================
+   3. TOP NAVIGATION BAR
+   ========================================== */
+.top-nav {
+  width: 100%;
+  background-color: var(--primary-green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 1rem;
+}
+
+.nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  background-color: transparent;
+  color: var(--accent-cream);
+  border: 2px solid var(--accent-cream);
+  border-radius: 6px;
+  padding: 0.55rem 1.25rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+  background-color: rgba(244, 241, 234, 0.15);
+}
+
+.nav-btn.active {
+  background-color: var(--accent-terracotta);
+  border-color: var(--accent-terracotta);
+  color: var(--white);
+}
+
+/* ==========================================
+   4. HEADERS, LOGO & CLICKABLE WIREFRAMES
+   ========================================== */
+.site-header {
+  width: 100%;
+  padding: 0.5rem 0 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.course {
+  font-weight: 600;
+  color: var(--accent-terracotta);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.logo-img {
+  max-width: 220px;
+  width: 100%;
+  height: auto;
+  margin: 1rem auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.wireframe-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.25rem;
+  align-items: stretch;
+}
+
+.wireframe-box {
+  background-color: var(--accent-cream);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wireframe-box:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-terracotta);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.wireframe-img {
+  width: 100%;
+  height: auto;
+  margin: 0.75rem auto 0 auto;
+  display: block;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+}
+
+.wireframe-cta {
+  display: inline-block;
+  margin-top: 0.85rem;
+  padding: 0.45rem 1rem;
+  background-color: var(--primary-green);
+  color: var(--white);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.wireframe-box:hover .wireframe-cta {
+  background-color: var(--accent-terracotta);
+}
+
+/* ==========================================
+   5. COLOR PALETTE TABLE
+   ========================================== */
+.colors {
+  width: 100%;
+  max-width: 650px;
+  margin: 1.2rem auto;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.colors th {
+  background-color: var(--text-dark);
+  color: var(--white);
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.colors td {
+  padding: 1.5rem 0.5rem;
+  font-weight: 700;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.colors .primary { background-color: #2d4739; color: var(--white); }
+.colors .secondary { background-color: #723d46; color: var(--white); }
+.colors .accent1 { background-color: #c96d44; color: var(--white); }
+.colors .accent2 { background-color: #f4f1ea; color: var(--text-dark); }
+
+/* ==========================================
+   6. SEARCH BAR, FILTER PILLS & BADGES
+   ========================================== */
+.search-wrap {
+  width: 100%;
+  max-width: 440px;
+  margin: 0.75rem auto 0 auto;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.65rem 1rem;
+  border: 2px solid rgba(45, 71, 57, 0.35);
+  border-radius: 8px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  background-color: var(--accent-cream);
+  outline: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.search-input:focus {
+  border-color: var(--primary-green);
+  background-color: var(--white);
+}
+
+.filter-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 1.25rem 0 1.5rem 0;
+}
+
+.filter-pill {
+  background-color: var(--accent-cream);
+  color: var(--primary-green);
+  border: 1.5px solid var(--primary-green);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.45rem 1.1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-pill:hover,
+.filter-pill.active-filter {
+  background-color: var(--primary-green);
+  color: var(--white);
+}
+
+.badge {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+  color: var(--white);
+}
+
+.badge-green { background-color: var(--primary-green); }
+.badge-blue { background-color: #2b5b84; }
+.badge-burgundy { background-color: var(--secondary-burgundy); }
+.badge-terracotta { background-color: var(--accent-terracotta); }
+
+/* ==========================================
+   7. TRAIL & GEAR CARDS GRID
+   ========================================== */
+.card-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.25rem;
+  align-items: stretch;
+}
+
+.info-card {
+  background-color: var(--accent-cream);
+  border-radius: 10px;
+  padding: 1.5rem;
+  border-top: 5px solid var(--accent-terracotta);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+.info-card > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-card.forest-top { border-top-color: var(--primary-green); }
+.info-card.burgundy-top { border-top-color: var(--secondary-burgundy); }
+
+.meta-row {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.btn-link {
+  display: inline-block;
+  margin-top: 1.25rem;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--primary-green);
+  color: var(--white);
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-link:hover {
+  background-color: var(--accent-terracotta);
+}
+
+.empty-message {
+  display: none;
+  margin: 1.5rem auto;
+  font-weight: 600;
+  color: var(--secondary-burgundy);
+}
+
+/* ==========================================
+   8. INTERACTIVE PREVIEW / GUIDE MODAL
+   ========================================== */
+.modal-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(31, 36, 33, 0.7);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.modal-backdrop.open {
+  display: flex;
+}
+
+.modal-box {
+  position: relative;
+  background-color: var(--white);
+  border-top: 6px solid var(--accent-terracotta);
+  border-radius: 12px;
+  max-width: 560px;
+  width: 100%;
+  padding: 2rem 1.75rem;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.75rem;
+  line-height: 1;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: var(--accent-terracotta);
+}
+
+.modal-text {
+  white-space: pre-line;
+  margin-top: 0.75rem;
+  color: var(--text-dark);
+}
+
+/* ==========================================
+   9. FOOTER & RESPONSIVE BREAKPOINTS
+   ========================================== */
+footer {
+  width: 100%;
+  background-color: var(--primary-green);
+  color: var(--accent-cream);
+  padding: 1.25rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+footer p {
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .card-grid,
+  .wireframe-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .page-content {
+    padding: 1.25rem;
+  }
+
+  .card-grid,
+  .wireframe-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-btn {
+    width: 100%;
+  }
+}

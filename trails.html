@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrailCam Diaries - Trail Guides</title>
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+
+  <div class="page-container">
+    <nav class="top-nav">
+      <a href="index.html" class="nav-btn">Page 1: Overview</a>
+      <a href="trails.html" class="nav-btn active">Page 2: Trail Guides</a>
+      <a href="tips.html" class="nav-btn">Page 3: Tips &amp; Gear</a>
+    </nav>
+
+    <main class="page-content">
+      <header class="site-header">
+        <h1>Eastern Idaho Trail Guides</h1>
+        <p>Filter local Rexburg and Caribou-Targhee trails by difficulty level or search by trail name to preview elevation stats and line-choice breakdowns.</p>
+        <div class="search-wrap">
+          <input type="search" id="card-search" class="search-input" placeholder="Search trails (e.g., Kelly Canyon, Rexburg, Hawley)...">
+        </div>
+      </header>
+
+      <div class="filter-bar">
+        <button type="button" class="filter-pill active-filter" data-filter="all">All Trails</button>
+        <button type="button" class="filter-pill" data-filter="green">Green (Beginner)</button>
+        <button type="button" class="filter-pill" data-filter="blue">Blue (Intermediate)</button>
+        <button type="button" class="filter-pill" data-filter="black">Black (Advanced)</button>
+      </div>
+
+      <p id="empty-message" class="empty-message">No trails match your filter or search. Try clearing your search box.</p>
+
+      <div class="card-grid">
+        <div class="info-card forest-top" data-category="green">
+          <div>
+            <span class="badge badge-green">Green Circle</span>
+            <h3>Tenderfoot Trail (Eagle Park)</h3>
+            <p class="meta-row">0.5 Miles &bull; Flat Terrain &bull; Rexburg, ID</p>
+            <p>Smooth, flowy singletrack winding through the woods along the Teton River. Low-consequence corners make it ideal for warming up and building confidence.</p>
+          </div>
+          <a href="#" class="btn-link">Watch POV Preview</a>
+        </div>
+
+        <div class="info-card forest-top" data-category="green">
+          <div>
+            <span class="badge badge-green">Green Circle</span>
+            <h3>Hidden Vista Loop</h3>
+            <p class="meta-row">1.1 Miles &bull; +85 ft Elevation &bull; Rexburg Area</p>
+            <p>Approachable meadow singletrack with gentle rollers and clear sightlines. Great for practicing body position and smooth shifting.</p>
+          </div>
+          <a href="#" class="btn-link">Watch POV Preview</a>
+        </div>
+
+        <div class="info-card" data-category="blue">
+          <div>
+            <span class="badge badge-blue">Blue Square</span>
+            <h3>Hawley Gulch Loop</h3>
+            <p class="meta-row">4.7 Miles &bull; +692 ft Elevation &bull; Kelly Canyon</p>
+            <p>Rolling ridge lines and shaded aspen drainage with moderate climbs, loose dirt corners, and small root step-ups.</p>
+          </div>
+          <a href="#" class="btn-link">Watch POV Preview</a>
+        </div>
+
+        <div class="info-card" data-category="blue">
+          <div>
+            <span class="badge badge-blue">Blue Square</span>
+            <h3>Nemo &amp; Hillbender Loop</h3>
+            <p class="meta-row">7.9 Miles &bull; +1,003 ft Elevation &bull; Targhee Forest</p>
+            <p>Fast, forested singletrack with tight twists, berms, and optional root pops. Includes full climb pacing and descent line tips.</p>
+          </div>
+          <a href="#" class="btn-link">Watch POV Preview</a>
+        </div>
+
+        <div class="info-card burgundy-top" data-category="black">
+          <div>
+            <span class="badge badge-burgundy">Black Diamond</span>
+            <h3>Grove Creek &amp; Drake Creek</h3>
+            <p class="meta-row">7.6 Miles &bull; +1,722 ft Elevation &bull; Big Hole Mtns</p>
+            <p>Sustained steep climbing rewarded by a fast, technical descent over embedded rocks, narrow switchbacks, and root drops.</p>
+          </div>
+          <a href="#" class="btn-link">Watch POV Preview</a>
+        </div>
+
+        <div class="info-card burgundy-top" data-category="black">
+          <div>
+            <span class="badge badge-burgundy">Black Diamond</span>
+            <h3>Moody Swamp to Red Butte</h3>
+            <p class="meta-row">7.4 Miles &bull; +1,397 ft Elevation &bull; Rexburg Backcountry</p>
+            <p>Rugged backcountry ascent with loose shale, steep pitches, and exposed ridge sections. Features slow-motion braking zone markers.</p>
+          </div>
+          <a href="#" class="btn-link">Watch POV Preview</a>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 TrailCam Diaries &bull; Ethan Heikell &bull; WDD 130</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

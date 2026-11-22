@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TrailCam Diaries - Overview</title>
+  <title>TrailCam Diaries - Home</title>
   <link rel="preconnect" href="https://googleapis.com">
   <link rel="preconnect" href="https://gstatic.com" crossorigin>
   <link href="https://googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -13,84 +13,116 @@
 
   <div class="page-container">
     <nav class="top-nav">
-      <a href="index.html" class="nav-btn active">Page 1: Overview</a>
-      <a href="trails.html" class="nav-btn">Page 2: Trail Guides</a>
-      <a href="tips.html" class="nav-btn">Page 3: Tips &amp; Gear</a>
+      <div class="nav-brand">
+        <img src="images/trailcam-logo.png" alt="TrailCam Diaries Logo" class="nav-logo">
+        <span>TrailCam Diaries</span>
+      </div>
+      <div class="nav-links">
+        <a href="index.html" class="nav-btn active">Home</a>
+        <a href="trails.html" class="nav-btn">Trail Guides</a>
+        <a href="tips.html" class="nav-btn">Tips &amp; Gear</a>
+      </div>
     </nav>
 
+    <!-- Mountain Bike Hero Section -->
+    <header class="hero-banner">
+      <img src="images/mountain-bike.png" alt="Mountain biker riding on a forest trail" class="hero-bg">
+      <div class="hero-overlay">
+        <img src="images/trailcam-logo.png" alt="TrailCam Diaries Logo" class="hero-logo">
+        <span class="hero-badge">WDD 130 &bull; Ethan Heikell</span>
+        <h1>Ride Local. Learn the Trails. Build Confidence.</h1>
+        <p>Turning real mountain biking footage into approachable trail guides, terrain previews, and practical gear tips for everyday riders.</p>
+        <div class="hero-actions">
+          <a href="trails.html" class="hero-btn primary-cta">Explore Trail Guides</a>
+          <a href="tips.html" class="hero-btn secondary-cta">Tips &amp; Gear</a>
+        </div>
+      </div>
+    </header>
+
     <main class="page-content">
-      <header class="site-header">
-        <h1>TrailCam Diaries Site Plan</h1>
-        <h2>Ethan Heikell</h2>
-        <p class="course">WDD 130</p>
-      </header>
+      <!-- Homepage Intro Cards -->
+      <section class="intro-grid">
+        <div class="info-card">
+          <h2>Our Purpose</h2>
+          <p>To transform mountain biking videos into an organized learning resource where everyday riders explore trails by location and skill level, understand trail difficulty, and gain confidence.</p>
+        </div>
 
-      <hr>
-
-      <section class="section-block">
-        <h2>Overview</h2>
-        <h3>Purpose</h3>
-        <p>To transform mountain biking videos into an organized learning resource where everyday riders explore trails by location and skill level, understand trail difficulty, and gain confidence.</p>
-        <h3>Audience</h3>
-        <p>Beginner to intermediate mountain bikers and local Eastern Idaho riders seeking approachable trail guidance, realistic terrain previews, and practical gear.</p>
+        <div class="info-card">
+          <h2>Who It's For</h2>
+          <p>Beginner to intermediate mountain bikers and local Eastern Idaho riders seeking approachable trail guidance, realistic terrain previews, and practical gear.</p>
+        </div>
       </section>
 
       <hr>
 
+      <!-- Featured Trail Photo Showcase -->
       <section class="section-block">
-        <h2>Branding</h2>
-        <h3>Website Logo</h3>
-        <img src="images/trailcam-logo.png" alt="TrailCam Diaries Logo" class="logo-img">
+        <h2>Eastern Idaho Trail Preview</h2>
+        <div class="featured-photo-card">
+          <img src="images/mountain-bike.png" alt="Mountain biker riding through Eastern Idaho pine forest trail" class="featured-trail-img">
+          <p class="photo-caption">Real trail conditions, pine singletrack, and approachable routes across Eastern Idaho.</p>
+        </div>
       </section>
 
       <hr>
 
-      <section class="section-block">
-        <h2>Style Guide</h2>
-        <h3>Color Palette</h3>
-        <table class="colors">
-          <thead>
-            <tr>
-              <th>Primary</th>
-              <th>Secondary</th>
-              <th>Accent 1</th>
-              <th>Accent 2</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="primary">#2d4739</td>
-              <td class="secondary">#723d46</td>
-              <td class="accent1">#c96d44</td>
-              <td class="accent2">#f4f1ea</td>
-            </tr>
-          </tbody>
-        </table>
+      <!-- Site Plan Style Guide Section (Hidden from Homepage, Kept in Code) -->
+      <section class="section-block hidden-section" hidden style="display: none;">
+        <h2>Site Style Guide</h2>
+        <div class="style-grid">
+          <div class="style-card">
+            <h3>Color Palette</h3>
+            <table class="colors">
+              <thead>
+                <tr>
+                  <th>Primary</th>
+                  <th>Secondary</th>
+                  <th>Accent 1</th>
+                  <th>Accent 2</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="primary">#2d4739</td>
+                  <td class="secondary">#723d46</td>
+                  <td class="accent1">#c96d44</td>
+                  <td class="accent2">#f4f1ea</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
-        <h3>Typography</h3>
-        <p><strong>Heading Font:</strong> Montserrat (Bold, 600/700)</p>
-        <p><strong>Paragraph Font:</strong> Open Sans (Regular, 400/600)</p>
+          <div class="style-card">
+            <h3>Typography &amp; Brand</h3>
+            <p><strong>Heading Font:</strong> Montserrat (Bold, 600/700)</p>
+            <p><strong>Paragraph Font:</strong> Open Sans (Regular, 400/600)</p>
+            <img src="images/trailcam-logo.png" alt="TrailCam Diaries Logo" class="logo-img">
+          </div>
+        </div>
       </section>
 
+      <hr class="hidden-section" hidden style="display: none;">
+
+      <!-- Clickable Page Preview Cards -->
       <section class="section-block">
-        <h2>Site Map &amp; Wireframes</h2>
-        <p>Click any wireframe below to open that page directly.</p>
+        <h2>Explore TrailCam Diaries</h2>
+        <p>Click any card below to jump directly to that section.</p>
         <div class="wireframe-grid">
           <a href="index.html" class="wireframe-box">
-            <h3>Page 1: Home Wireframe</h3>
-            <img src="images/home-wireframe.png" alt="Home Page Wireframe" class="wireframe-img">
-            <span class="wireframe-cta">View Home Page &rarr;</span>
+            <h3>Home</h3>
+            <img src="images/mountain-bike.png" alt="Mountain biker riding on an Eastern Idaho trail" class="wireframe-img">
+            <span class="wireframe-cta">View Home &rarr;</span>
           </a>
 
           <a href="trails.html" class="wireframe-box">
-            <h3>Page 2: Trail Guides Wireframe</h3>
-            <img src="images/trail-guides-wireframe.png" alt="Trail Guides Page Wireframe" class="wireframe-img">
+            <h3>Trail Guides</h3>
+            <img src="images/trail-preview.png" alt="Scenic forest singletrack mountain bike trail" class="wireframe-img">
             <span class="wireframe-cta">Go to Trail Guides &rarr;</span>
           </a>
 
           <a href="tips.html" class="wireframe-box">
-            <h3>Page 3: Tips &amp; Gear Wireframe</h3>
-            <img src="images/tips-gear-wireframe.png" alt="Tips and Gear Page Wireframe" class="wireframe-img">
+            <h3>Tips &amp; Gear</h3>
+            <img src="images/gear-preview.png" alt="Mountain biking helmet, gloves, and trail gear" class="wireframe-img">
             <span class="wireframe-cta">Go to Tips &amp; Gear &rarr;</span>
           </a>
         </div>
